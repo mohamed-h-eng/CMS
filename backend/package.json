@@ -1,7 +1,9 @@
-﻿{
+{
   "name": "backend",
   "version": "1.0.0",
   "description": "Express API backend template",
+  "license": "ISC",
+  "author": "",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
