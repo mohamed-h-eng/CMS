@@ -1,8 +1,23 @@
-﻿{
-  "name": "cms-fullstack-template",
-  "private": true,
+{
+  "name": "frontend",
   "version": "1.0.0",
+  "private": true,
   "description": "Reusable full-stack template with Express backend and React frontend",
+  "homepage": "https://github.com/mohamed-h-eng/CMS#readme",
+  "bugs": {
+    "url": "https://github.com/mohamed-h-eng/CMS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamed-h-eng/CMS.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "dev:backend": "npm --prefix backend run dev",
     "dev:frontend": "npm --prefix frontend run start",
