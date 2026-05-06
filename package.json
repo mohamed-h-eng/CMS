@@ -1,0 +1,12 @@
+﻿{
+  "name": "cms-fullstack-template",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Reusable full-stack template with Express backend and React frontend",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run start",
+    "start:backend": "npm --prefix backend run start",
+    "build:frontend": "npm --prefix frontend run build"
+  }
+}
