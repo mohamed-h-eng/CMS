@@ -1,18 +1,41 @@
-﻿import { asyncHandler } from '../utils/asyncHandler.js';
+﻿import { asyncHandler } from "../utils/asyncHandler.js";
 import {
   getAllEventsService,
   getEventByIdService,
   createEventService,
   updateEventService,
   deleteEventService,
-} from '../services/event.service.js';
+} from "../services/event.service.js";
+
+export const createEvent = asyncHandler(async (req, res) => {
+  const { title, description, date, location, image } = req.body;
+
+  if (!title || !description || !date || !location) {
+    res.status(400);
+    throw new Error("title, description, date, and location are required");
+  }
+
+  const event = await createEventService({
+    title,
+    description,
+    date,
+    location,
+    image,
+  });
+
+  res.status(201).json({
+    success: true,
+    message: "Event created successfully",
+    data: event,
+  });
+});
 
 export const getAllEvents = asyncHandler(async (req, res) => {
   const events = await getAllEventsService();
 
   res.status(200).json({
     success: true,
-    message: 'Events fetched successfully',
+    message: "Events fetched successfully",
     data: events,
   });
 });
@@ -22,24 +45,7 @@ export const getEventById = asyncHandler(async (req, res) => {
 
   res.status(200).json({
     success: true,
-    message: 'Event fetched successfully',
-    data: event,
-  });
-});
-
-export const createEvent = asyncHandler(async (req, res) => {
-  const { title, description, date, location, image } = req.body;
-
-  if (!title || !description || !date || !location) {
-    res.status(400);
-    throw new Error('title, description, date, and location are required');
-  }
-
-  const event = await createEventService({ title, description, date, location, image });
-
-  res.status(201).json({
-    success: true,
-    message: 'Event created successfully',
+    message: "Event fetched successfully",
     data: event,
   });
 });
@@ -58,7 +64,7 @@ export const updateEvent = asyncHandler(async (req, res) => {
 
   res.status(200).json({
     success: true,
-    message: 'Event updated successfully',
+    message: "Event updated successfully",
     data: event,
   });
 });
