@@ -1,0 +1,13 @@
+:root{
+    --border-color:#C7C4D8
+}
+*{
+    font-family:'Roboto'
+}
+body{
+    background-color:#F8F9FF
+}
+input{
+    border:none;
+    background:none;
+}
