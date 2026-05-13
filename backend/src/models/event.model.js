@@ -7,6 +7,15 @@ const eventSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    category:{
+      type:mongoose.Schema.Types.ObjectId,
+      ref:"Category",
+      required:true
+    },
+    capacity:{
+      type:Number,
+      required:true
+    },
     description: {
       type: String,
       required: true,
@@ -26,6 +35,11 @@ const eventSchema = new mongoose.Schema(
       default: '',
       trim: true,
     },
+    priority:{
+      type:String,
+      enum:['top','normal'],
+      default:'normal'
+    }
   },
   {
     timestamps: true,

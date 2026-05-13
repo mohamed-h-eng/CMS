@@ -15,12 +15,12 @@ const ticketSchema = new mongoose.Schema(
     price: {
       type: Number,
       required: true,
-      min: 0,
+      min: 1,
     },
     quantity: {
       type: Number,
       required: true,
-      min: 0,
+      min: 1,
     },
   },
   {
