@@ -1,4 +1,4 @@
-﻿import mongoose from 'mongoose';
+﻿import mongoose from "mongoose";
 
 const eventSchema = new mongoose.Schema(
   {
@@ -7,14 +7,14 @@ const eventSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    category:{
-      type:mongoose.Schema.Types.ObjectId,
-      ref:"Category",
-      required:true
+    category: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Category",
+      required: true,
     },
-    capacity:{
-      type:Number,
-      required:true
+    capacity: {
+      type: Number,
+      required: true,
     },
     description: {
       type: String,
@@ -32,18 +32,18 @@ const eventSchema = new mongoose.Schema(
     },
     image: {
       type: String,
-      default: '',
+      default: "",
       trim: true,
     },
-    priority:{
-      type:String,
-      enum:['top','normal'],
-      default:'normal'
-    }
+    priority: {
+      type: String,
+      enum: ["top", "normal"],
+      default: "normal",
+    },
   },
   {
     timestamps: true,
-  }
+  },
 );
 
-export const Event = mongoose.model('Event', eventSchema);
+export const Event = mongoose.model("Event", eventSchema);
