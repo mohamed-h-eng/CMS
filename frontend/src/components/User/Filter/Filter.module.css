@@ -1,11 +1,12 @@
 .filter {
+    background-color: #F8F9FF;
     position: relative;
 }
 
 .clearBtn {
     background-color: transparent;
     color: #3525CD;
-    border: red 1px solid;
+    border: 1px solid red;
     cursor: pointer;
     position: absolute;
     right: 0;
@@ -18,4 +19,41 @@
     line-height: 24px;
     letter-spacing: 0.8px;
     color: #464555;
+    margin: 10px;
 }
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.options input[type="checkbox"] {
+    display: none;
+}
+
+.priceField .options input[type="checkbox"] {
+    display: block;
+    width: 16px;
+    height: 16px;
+    accent-color: #3525CD;
+}
+.dateField .options label {
+    padding: 5px 15px;
+    border-radius: 50px;
+    background-color: #DCE9FF;
+    width: fit-content;
+}
+.dateField input[type="checkbox"]:checked + label {
+    background-color: #3525CD;
+    color: #FFFFFF;
+}   
