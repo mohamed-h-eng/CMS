@@ -1,0 +1,20 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.content {
+  flex: 1;
+  padding: 32px;
+}
+
+.content h1 {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.content p {
+  margin: 0;
+  color: #4b5563;
+}
