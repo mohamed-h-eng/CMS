@@ -1,6 +1,13 @@
 ﻿import mongoose from 'mongoose';
 import { Event } from '../models/event.model.js';
 
+
+export async function createEventService(payload) {
+  return event = await Event.create(payload);
+
+}
+
+
 export async function getAllEventsService() {
   return Event.find().sort({ createdAt: -1 });
 }
@@ -24,9 +31,7 @@ export async function getEventByIdService(id) {
   return event;
 }
 
-export async function createEventService(payload) {
-  return Event.create(payload);
-}
+
 
 export async function updateEventService(id, payload) {
   const event = await getEventByIdService(id);
