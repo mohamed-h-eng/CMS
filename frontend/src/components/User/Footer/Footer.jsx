@@ -14,14 +14,14 @@ const Footer = () => {
             </p>
           </div>
           <div
-            className={`${Styles.links} col-4 d-flex gap-4 justify-content-center`}
+            className={`${Styles.links} col-6 d-flex gap-4 justify-content-center`}
           >
             <Link>Privacy Policy </Link>
             <Link>Terms of Service </Link>
             <Link>Support </Link>
             <Link>API Docs </Link>
           </div>
-          <div className="col-4 d-flex gap-5 justify-content-end">
+          <div className="col-2 d-flex gap-5 justify-content-end">
             <IoShareSocialSharp className={Styles.icon} />
             <IoEarth className={Styles.icon} />
           </div>
