@@ -27,7 +27,7 @@ function App() {
 
       {page === 'dashboard' ? <Dashboard /> : <Home />}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
