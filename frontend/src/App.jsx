@@ -1,14 +1,14 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
-import Dashboard from './pages/Dashboard/Dashboard'
+// import Dashboard from './pages/Dashboard/Dashboard'
 import Home from './pages/Home/Home'
 
 function App() {
-  const [page, setPage] = useState('home')
+  // const [page, setPage] = useState('home')
 
   return (
     <>
-      <header className="app-header">
+      {/* <header className="app-header">
         <button
           className={page === 'home' ? 'active' : ''}
           type="button"
@@ -25,7 +25,8 @@ function App() {
         </button>
       </header>
 
-      {page === 'dashboard' ? <Dashboard /> : <Home />}
+      {page === 'dashboard' ? <Dashboard /> : <Home />} */}
+      <Home />
     </>
   );
 }
