@@ -1,61 +1,34 @@
-import styles from './Status.module.css'
-import { MdEvent } from "react-icons/md";
+import styles from "./Status.module.css";
+import { FaRegCalendarCheck } from "react-icons/fa";
+import { LuTicket } from "react-icons/lu";
+import { BsCashStack } from "react-icons/bs";
+import { RiCalendarScheduleLine } from "react-icons/ri";
+
 
 export default function Status() {
   return (
     <>
-      <div className={`card-deck `} >
-  <div className={`card ${styles.cardAlign}`}>
-    {/* <img className="card-img-top" src="..." alt="Card image cap"></img> */}
-    <div className="card-body">
-        <MdEvent />
-        <br />
-      <h6 className="card-title">TOTAL EVENTS</h6>
-
-            <h1>12</h1>
-
-     <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div className={`card ${styles.cardAlign}`}>
-    {/* <img className="card-img-top" src="..." alt="Card image cap"></img> */}
-    <div className="card-body">
-        <MdEvent />
-        <br />
-      <h6 className="card-title">TOTAL TICKETS SOLD</h6>
-
-            <h1>12</h1>
-
-      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div className={`card ${styles.cardAlign}`}>
-    {/* <img className="card-img-top" src="..." alt="Card image cap"></img> */}
-    
-    <div className="card-body">
-        <MdEvent />
-        <br />
-      <h6 className="card-title">REVENUE</h6>
-
-            <h1>12</h1>
-
-      <p className="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-
-<div className={`card ${styles.cardAlign}`}>
-    {/* <img className="card-img-top" src="..." alt="Card image cap"></img> */}
-    <div className="card-body">
-        <MdEvent />
-        <br />
-      <h6 className="card-title">PENDING APPROVALS</h6>
-
-            <h1>12</h1>
-
-      <p className="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
+      <div className={styles.container}>
+          <Card icon={<FaRegCalendarCheck/>} label="TOTAL EVENTS" counter="12" tag="+2 new"/>
+          <Card icon={<LuTicket />} label="TOTAL TICKETS SOLD" counter="1,240" tag="+15%"/>
+          <Card icon={<BsCashStack />} label="REVENUE" counter="$4,200" tag="Target Reached"/>
+          <Card icon={<RiCalendarScheduleLine />} label="PENDING APPROVALS" counter="3" tag="Urgent"/>
+      </div>
     </>
   );
+}
+
+function Card({icon, label, counter, tag}){
+  return(<>
+    <div className={styles.card}>
+          <div className={styles.header}>
+            <div className={styles.icon}>
+              {icon}
+            </div>
+            <span className={`${styles.tag} ${tag ==="Urgent"? "urgent":""}`}>{tag}</span>
+          </div>
+          <p className={styles.label}>{label}</p>
+          <p className={styles.counter}>{counter}</p>
+    </div>
+  </>)
 }

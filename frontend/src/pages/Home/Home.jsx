@@ -3,6 +3,9 @@ import Filter from "../../components/User/Filter/Filter";
 import Footer from "../../components/User/Footer/Footer";
 import Button from "../../components/Ui/Button/Button";
 import Style from "./Home.module.css";
+import {Link} from 'react-router-dom'
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
+
 const Home = () => {
     {/*Dummy Event Cards */ }
     const events = [
@@ -40,6 +43,16 @@ const Home = () => {
 
     return (
         <>
+            <nav className="d-flex gap-3 p-3">
+                <Link className="btn btn-outline-secondary d-flex align-items-center" to="/dashboard">
+                    <MdOutlineAdminPanelSettings />
+                    Switch to Admin View
+                </Link>
+                <div className="d-flex gap-3 px-3">
+                    <Link className="btn btn-light">Login</Link>
+                    <Link className="btn btn-primary">Sign Up</Link>
+                </div>
+            </nav>
             <div className={`${Style.home} d-flex gap-0`}>
                 <Filter />
                 <main className={`container-fluid py-4 ${Style.main}`}>

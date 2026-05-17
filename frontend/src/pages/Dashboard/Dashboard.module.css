@@ -3,18 +3,32 @@
   min-height: 100vh;
   background: #f8fafc;
 }
-
-.content {
-  flex: 1;
-  padding: 32px;
+.sidebar{
+  border-right:1px solid var(--color-mute);
+  width:300px;
 }
-
-.content h1 {
-  margin: 0 0 8px;
-  color: #111827;
+.body{
+  /* border:1px solid red; */
+  width:100%;
+  padding:40px;
+  padding-top:10px;
+  display:flex;
+  flex-direction:column;
+  gap:40px;
 }
-
-.content p {
-  margin: 0;
-  color: #4b5563;
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.addEvents{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+}
+.events{
+  width:100%;
+}
+.form{
+  width:fit-content;
 }
