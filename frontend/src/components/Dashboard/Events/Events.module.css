@@ -1,15 +1,17 @@
 .container{
-    border:1px solid var(--border-color);
+    border:1px solid var(--color-border);
     background-color:white;
     border-radius:10px;
+    padding-top:10px;
+    width:100%;
+    height:100%;
 }
 .header{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    /* border:1px solid red; */
-    padding:0 10px;
-    border-bottom:1px solid var(--border-color);
+    padding:10px;
+    border-bottom:1px solid var(--color-border);
     margin:0;
 }
 .header :first-child{
@@ -22,11 +24,25 @@
     color:black
 }
 .SearchInput{
-    border:1px solid #777587;
+    border:1px solid var(--color-border);
+    background-color:var(--color-primary-mute);
     border-radius:5px;
     display:flex;
     align-items:center;
     padding:2px;   
+}
+.input{
+    border:none;
+    font-size:16px;
+    background:none;
+}
+.input:focus{
+    outline:none
+}
+.filter{
+    border:1px solid var(--color-border);
+    border-radius:5px;
+    background:none;
 }
 .SearchInput :last-child:focus{
     outline:none
@@ -45,8 +61,7 @@
     display:flex;
     justify-content:space-between;
     flex-direction:column;
-    padding:0 10px;
-    margin-bottom:-1px;
+    margin-top:-1px;
 
 }
 /* event item */
@@ -56,7 +71,8 @@
     align-content:center;
     /* border:1px solid red; */
     gap:0;
-    border-bottom:1px solid var(--border-color)
+    border-top:1px solid var(--color-border);
+    padding:0 10px;
 }
 .eventName{
     font-size:20px;

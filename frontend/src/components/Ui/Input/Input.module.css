@@ -2,11 +2,16 @@
     /* border:1px solid red; */
     display:flex;
     flex-direction:column;
+<<<<<<< HEAD
     gap:8px;
+=======
+    gap:10px;
+>>>>>>> master
     width:100%;
 }
 .label{
     font-size:14px;
+<<<<<<< HEAD
     margin:0;
 }
 .input{
@@ -33,3 +38,22 @@
 .iconInput:focus{
     outline:none;
 }
+=======
+    font-weight:600;
+    margin:0;
+    width:100%;
+}
+.input{
+    border:2px solid var(--color-border);
+    border-radius:8px;
+    padding:14px;
+    background-color:var(--color-primary-mute);
+    height:50px;
+    width:100%;
+}
+.dual{
+    display:flex;
+    gap:16px;
+    width:100%;
+}
+>>>>>>> master

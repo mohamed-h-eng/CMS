@@ -1,13 +1,20 @@
 import styles from './Input.module.css'
+<<<<<<< HEAD
 import { CiLocationOn } from "react-icons/ci";
 
 export function FormInput({title, placeholder}){
     return (
     <>
+=======
+
+export function Input({title, placeholder}){
+    return (<>
+>>>>>>> master
         <div className={styles.container}>
             <p className={styles.label}>{title}</p>
             <input className={styles.input} placeholder={placeholder}/>
         </div>
+<<<<<<< HEAD
     </>
     )
 }
@@ -47,4 +54,15 @@ export function FormImage({title}){
             </div>
         </>
     )
+=======
+    </>)
+}
+
+export function InputDual({children}){
+    return (<>
+        <div className={styles.dual}>
+            {children}
+        </div>
+    </>)
+>>>>>>> master
 }
