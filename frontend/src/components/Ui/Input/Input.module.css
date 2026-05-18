@@ -2,43 +2,11 @@
     /* border:1px solid red; */
     display:flex;
     flex-direction:column;
-<<<<<<< HEAD
-    gap:8px;
-=======
     gap:10px;
->>>>>>> master
     width:100%;
 }
 .label{
     font-size:14px;
-<<<<<<< HEAD
-    margin:0;
-}
-.input{
-    border:2px solid var(--border-color);
-    border-radius:5px;
-    padding:14px;
-    font-size:16px;
-    background-color:#F8F9FF;
-}
-.dualContainer{
-    border:1px solid red;
-    display:flex;
-    justify-content:space-between;
-    gap:16px;
-}
-/* form icon input */
-.iconInputContainer{
-    background-color:#F8F9FF;
-    border:2px solid var(--border-color);
-    border-radius:5px;
-    padding:14px;
-    font-size:16px;
-}
-.iconInput:focus{
-    outline:none;
-}
-=======
     font-weight:600;
     margin:0;
     width:100%;
@@ -56,4 +24,3 @@
     gap:16px;
     width:100%;
 }
->>>>>>> master
