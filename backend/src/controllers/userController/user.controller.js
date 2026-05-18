@@ -1,6 +1,6 @@
 ﻿import mongoose from 'mongoose';
-import { User } from '../models/user.model.js';
-import { asyncHandler } from '../utils/asyncHandler.js';
+import { User } from '../../models/user.model.js';
+import { asyncHandler } from '../../utils/asyncHandler.js';
 
 export const getUsers = asyncHandler(async (req, res) => {
   const users = await User.find().sort({ createdAt: -1 });

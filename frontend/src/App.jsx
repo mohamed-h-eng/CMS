@@ -5,13 +5,10 @@ import {Link, Routes, Route} from 'react-router-dom'
 function App() {
   return (
     <>
-      {/* <Dashboard/> */}
       <Routes>
         <Route index path="/home"element={<Home />}/>
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-    </>
-  );
-}
-
+</>
+)}
 export default App;
