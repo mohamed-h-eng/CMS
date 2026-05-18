@@ -20,7 +20,7 @@ export default function Dashboard() {
             <p>Welcome back, manager. Here is what's happening today</p>
           </div>
           <div className="d-flex gap-3 align-items-center">
-            <Link className="btn btn-outline-secondary d-flex gap-1 align-items-center" to="/home">
+            <Link className="btn btn-outline-secondary d-flex gap-1 align-items-center" to="/">
             <IoEyeOutline/>
             Switch to User View
             </Link>
