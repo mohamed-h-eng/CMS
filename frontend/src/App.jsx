@@ -5,6 +5,7 @@ import {Link, Routes, Route} from 'react-router-dom'
 function App() {
   return (
     <>
+    <h1>hello</h1>
       <Routes>
         <Route index path="/"element={<Home />}/>
         <Route path="/dashboard" element={<Dashboard />} />
