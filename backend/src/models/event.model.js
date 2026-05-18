@@ -10,7 +10,7 @@ const eventSchema = new mongoose.Schema(
     category: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
-      required: true,
+      // required: true, //TODO we will change it after create Category model
     },
     capacity: {
       type: Number,
