@@ -12,9 +12,9 @@ export default function Events(){
                     <div className={styles.headerSearch}>
                         <div className={styles.SearchInput}>
                             <IoIosSearch style={{border:"none"}}/>
-                            <input placeholder="Search events..."/>
+                            <input placeholder="Search events..." className={styles.input}/>
                         </div>
-                        <button className="filer"><IoFilterSharp /></button>
+                        <button className={styles.filter}><IoFilterSharp/></button>
                     </div>
                 </div>
                 <div className={styles.body}>
