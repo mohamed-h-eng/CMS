@@ -29,11 +29,11 @@ function CardComponent({ event }) {
       <Card.Body className={Style.body}>
         <Card.Title className={Style.title}>{event.title}</Card.Title>
         <Card.Text className={Style.description}>{event.description}</Card.Text>
-        <div className={Style.location}>
+        <div className={`d-flex align-items-center my-3 ${Style.location}`}>
           <FaMapMarkerAlt />
           {event.location}
         </div>
-        <Button className={Style.actionButton}>Book Ticket</Button>
+        <Button className={`px-4 w-100 ${Style.actionButton}`}>Book Ticket</Button>
       </Card.Body>
     </Card>
   );

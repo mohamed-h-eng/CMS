@@ -1,18 +1,29 @@
-.navbar{
-   background-color: #F8F9FF
-   
+.navbar {
+    background-color: #F8F9FF
 }
 
-.navh1{
+.navh1 {
     color: #3525CD;
 }
 
-.navlink{
+.navlink {
     color: black;
 }
 
 
-.btn{
+.btn {
     background-color: #3525CD;
     border-color: #3525CD;
+}
+
+.SwitchBtn {
+    background-color: transparent ;
+    color: #3525CD ;
+    border: 2px solid #3525CD ;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out ;
+}
+
+.SwitchBtn:hover {
+    background-color: #3525CD ;
+    color: white ;
 }
