@@ -5,8 +5,42 @@ import Footer from "../../components/User/Footer/Footer";
 import Style from "./Home.module.css";
 import {Link} from 'react-router-dom'
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
+import CardComponent from "../../components/User/Card/CardComponent";
+import Button from "../../components/Ui/Button/Button";
 
 const Home = () => {
+     const events = [
+        {
+            id: 1,
+            title: "Event 1",
+            date: "2023-06-01",
+            location: "Location 1",
+            description: "Description for Event 1",
+            image: "https://via.placeholder.com/150",
+            eventType: "Music",
+            price: 20,
+        },
+        {
+            id: 2,
+            title: "Event 2",
+            date: "2023-06-05",
+            location: "Location 2",
+            description: "Description for Event 2",
+            image: "https://via.placeholder.com/150",
+            eventType: "Art",
+            price: 0,
+        },
+        {
+            id: 3,
+            title: "Event 3",
+            date: "2023-06-10",
+            location: "Location 3",
+            description: "Description for Event 3",
+            image: "https://via.placeholder.com/150",
+            eventType: "Technology",
+            price: 0,
+        },
+       ];
     return (
         <>
             <nav className="d-flex gap-3 p-3">
