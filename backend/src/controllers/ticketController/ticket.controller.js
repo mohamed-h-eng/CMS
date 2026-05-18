@@ -1,10 +1,10 @@
-﻿import { asyncHandler } from '../utils/asyncHandler.js';
+﻿import { asyncHandler } from '../../utils/asyncHandler.js';
 import {
   getTicketsForEventService,
   createTicketService,
   updateTicketService,
   deleteTicketService,
-} from '../services/ticket.service.js';
+} from '../../services/ticket.service.js';
 
 export const getTicketsForEvent = asyncHandler(async (req, res) => {
   const { eventId } = req.params;

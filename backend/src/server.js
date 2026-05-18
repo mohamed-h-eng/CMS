@@ -1,8 +1,8 @@
-﻿import app from './app.js';
-import { connectDatabase } from './config/db.js';
-import { env } from './config/env.js';
+﻿import app from "./app.js";
+import { connectDatabase } from "./config/db.js";
+import { env } from "./config/env.js";
 
-async function startServer() {
+async function bootstrap() {
   try {
     await connectDatabase();
 
@@ -10,9 +10,9 @@ async function startServer() {
       console.log(`Backend server running on port ${env.port}`);
     });
   } catch (error) {
-    console.error('Failed to start backend server:', error);
+    console.error("Failed to start backend server:", error);
     process.exit(1);
   }
 }
 
-startServer();
+bootstrap();

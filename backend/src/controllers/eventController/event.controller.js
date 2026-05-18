@@ -1,18 +1,24 @@
-﻿import { asyncHandler } from "../utils/asyncHandler.js";
+﻿import { asyncHandler } from "../../utils/asyncHandler.js";
 import {
+  createEventService,
   getAllEventsService,
   getEventByIdService,
-  createEventService,
   updateEventService,
   deleteEventService,
-} from "../services/event.service.js";
+} from "../../services/EventService/event.service.js";
 
 export const createEvent = asyncHandler(async (req, res) => {
-  const { title, description, date, location, image } = req.body;
-
-  if (!title || !description || !date || !location) {
+  const { title, description, date, location, capacity } = req.body;
+  if (!title || !description || !date || !location || !capacity) {
     res.status(400);
-    throw new Error("title, description, date, and location are required");
+    throw new Error("title, description, date, and location are required", {
+      cause: 400,
+    });
+  }
+
+  if (!req.file) {
+    res.status(400);
+    throw new Error("Image is required");
   }
 
   const event = await createEventService({
@@ -20,7 +26,8 @@ export const createEvent = asyncHandler(async (req, res) => {
     description,
     date,
     location,
-    image,
+    image: req.file.filename,
+    capacity,
   });
 
   res.status(201).json({
@@ -51,16 +58,11 @@ export const getEventById = asyncHandler(async (req, res) => {
 });
 
 export const updateEvent = asyncHandler(async (req, res) => {
-  const { title, description, date, location, image } = req.body;
-  const payload = {};
-
-  if (title !== undefined) payload.title = title;
-  if (description !== undefined) payload.description = description;
-  if (date !== undefined) payload.date = date;
-  if (location !== undefined) payload.location = location;
-  if (image !== undefined) payload.image = image;
-
-  const event = await updateEventService(req.params.id, payload);
+  const { id } = req.params;
+  if (req.file) {
+    req.body.image = req.file.filename;
+  }
+  const event = await updateEventService(id, req.body);
 
   res.status(200).json({
     success: true,
@@ -72,5 +74,7 @@ export const updateEvent = asyncHandler(async (req, res) => {
 export const deleteEvent = asyncHandler(async (req, res) => {
   await deleteEventService(req.params.id);
 
-  res.status(204).send();
+  res.status(200).json({
+    message: "Event is Deleted Successfully",
+  });
 });

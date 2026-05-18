@@ -1,5 +1,5 @@
 ﻿import mongoose from 'mongoose';
-import { Ticket } from '../models/ticket.model.js';
+import { Ticket } from '../../models/ticket.model.js';
 import { getEventByIdService } from './event.service.js';
 
 export async function getTicketsForEventService(eventId) {

@@ -1,11 +1,13 @@
 .sidebar {
-  width: 260px;
-  min-height: 100vh;
-  background: #1f2937;
-  color: #f8fafc;
-  border-right: 1px solid #334155;
+  height:100%;
+  width:100%;
+  background: var(--color-primary-mute);
 }
-
+.sidebarLabel{
+  font-weight:700;
+  font-size:20;
+  color:var(--color-primary)
+}
 .header {
   padding: 22px 20px;
   border-bottom: 1px solid #334155;
@@ -29,21 +31,21 @@
   justify-content: space-between;
   min-height: 44px;
   padding: 10px 12px;
-  color: #cbd5e1;
+  /* color: #cbd5e1; */
   text-decoration: none;
   border-radius: 8px;
 }
 
 .link:hover,
 .active {
-  background: #334155;
-  color: #ffffff;
+  /* background: #334155; */
+  /* color: #ffffff; */
 }
 
 .badge {
   padding: 3px 8px;
-  color: #0f172a;
-  background: #facc15;
+  /* color: #0f172a; */
+  /* background: #facc15; */
   border-radius: 999px;
   font-size: 12px;
   font-weight: 700;

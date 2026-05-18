@@ -1,5 +1,5 @@
-﻿import { asyncHandler } from '../utils/asyncHandler.js';
-import { loginAdminService } from '../services/auth.service.js';
+﻿import { asyncHandler } from '../../utils/asyncHandler.js';
+import { loginAdminService } from '../../services/auth.service.js';
 
 export const login = asyncHandler(async (req, res) => {
   const { email, password } = req.body;

@@ -1,10 +1,24 @@
 import mongoose from "mongoose";
-import { categoryModel } from "../models/category.model";
-import { AppError } from "../utils/AppError";
+import { categoryModel } from "../../models/category.model.js";
+import { AppError } from "../../utils/AppError.js";
+import { Event } from "../../models/event.model.js";
 
-export async function createCategoryService(data) {
-  return await categoryModel.create(data);
+export async function createCategoryService(id, data) {
+  const eventId = await Event.findOne({ id });
+  if (!eventId) {
+    throw new Error("Event Id is Not Existed..", { cause: 404 });
+  }
+
+  console.log(eventId);
+  //TODO
+  if (!data) {
+    throw new Error("title, description and icon are Required", { cause: 404 });
+  }
+  return await categoryModel.create(id, data);
 }
+
+
+
 
 export async function getAllCategoryService() {
   return await categoryModel.find();
