@@ -33,7 +33,7 @@ const Filter = () => {
   };
 
   return (
-    <aside className={`col-3 d-flex flex-column p-3 ${Style.filter}`}>
+    <aside className={`col-2 d-flex flex-column p-3 ${Style.filter}`}>
       <h4 className={`${Style.title} `}>Filters</h4>
       <div className={Style.filterGroup}>
         <button className={Style.clearBtn} onClick={handleClearAll}>Clear all</button>

@@ -4,10 +4,10 @@ import { IoShareSocialSharp, IoEarth } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <div className={Styles.footer}>
-      <div className="p-4">
+    <div className={`${Styles.footer} py-2 px-5`}>
+      <div className="">
         <div className="row align-items-center">
-          <div className="col-4 d-flex flex-column gap-2 justify-content-start">
+          <div className="col-4 d-flex flex-column gap-0 justify-content-start">
             <h3 className={Styles.logo}>EventPro</h3>
             <p className={Styles.description} style={{ color: "#464555" }}> 
               © 2026 EventPro. Management. Professional Logistics Defined.

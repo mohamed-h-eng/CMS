@@ -1,4 +1,9 @@
-
+.card{
+    border-radius: 5%;
+}
+.image{
+    border-radius: 5% 5% 0 0 ;
+}
 .location svg {
     color: #712ae2;
     font-size: 18px;

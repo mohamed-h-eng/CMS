@@ -1,45 +1,15 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import Button from "../../Ui/Button/Button";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 import styles from "./Carousel.module.css";
-import Cardimg from "../../../assets/images/Cardimage.png";
 
-const featuredEvents = [
-  {
-    id: 1,
-    badge: "TRENDING NOW",
-    title: "International Film Festival 2024",
-    description: "Celebrating cinematic excellence from independent...",
-    image: Cardimg,
-  },
-  {
-    id: 2,
-    badge: "BEST SELLER",
-    title: "Cybersecurity World Summit",
-    description: "Deep dive into the future of digital defense and cloud...",
-    image: Cardimg,
-  },
-  {
-    id: 3,
-    badge: "ELITE ACCESS",
-    title: "Soul & Jazz Night",
-    description: "An intimate residence of smooth music and vibes...",
-    image: Cardimg,
-  },
-  {
-    id: 4,
-    badge: "NEW EVENT",
-    title: "Tech Leaders Conference",
-    description: "Meet innovators, founders, and industry leaders...",
-    image: Cardimg,
-  },
-];
 
-export default function Carousel() {
+export default function Carousel({ events }) {
   return (
     <section className={styles.featured}>
       <div className={styles.header}>
@@ -82,7 +52,7 @@ export default function Carousel() {
         }}
         className={styles.slider}
       >
-        {featuredEvents.map((event) => (
+        {events.map((event) => (
           <SwiperSlide key={event.id}>
             <article className={styles.card}>
               <img src={event.image} alt={event.title} className={styles.image} />
@@ -94,9 +64,9 @@ export default function Carousel() {
                 <h3>{event.title}</h3>
                 <p>{event.description}</p>
 
-                <button className={styles.viewBtn} type="button">
+                <Button className={styles.viewBtn} type="button">
                   View Event
-                </button>
+                </Button>
               </div>
             </article>
           </SwiperSlide>
