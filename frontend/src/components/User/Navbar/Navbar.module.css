@@ -10,6 +10,15 @@
     color: black;
 }
 
+.navlink:hover {
+    color: #3525CD;
+}
+
+.active {
+    color: #3525CD;
+    font-weight: 600;
+    border-bottom: #3525CD 2px solid;
+}
 
 .btn {
     background-color: #3525CD;
@@ -17,13 +26,30 @@
 }
 
 .SwitchBtn {
-    background-color: transparent ;
-    color: #3525CD ;
-    border: 2px solid #3525CD ;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out ;
+    background-color: transparent;
+    color: #3525CD;
+    border: 2px solid #3525CD;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .SwitchBtn:hover {
-    background-color: #3525CD ;
-    color: white ;
+    background-color: #3525CD;
+    color: white;
+}
+
+.searchbar {
+    position: relative;
+    /* width: 30%; */
+}
+
+.searchBtn {
+    position: absolute;
+    height: 99%;
+    right: 0;
+    /* top: auto; */
+}
+
+.searchInput {
+    border: #3525CD 2px solid;
+
 }
