@@ -32,7 +32,6 @@ export default function Events(){
                         <EventItem data={{name:"name",date:"date",location:"location",capacity:"capacity",status:"status"}} />
                         <EventItem data={{name:"name",date:"date",location:"location",capacity:"capacity",status:"status"}} />
                     </div>
-
                 </div>
             </div>
         </>

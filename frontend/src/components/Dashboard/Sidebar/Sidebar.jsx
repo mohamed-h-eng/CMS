@@ -32,33 +32,29 @@ export default function SideBar() {
               Manage Events
             </a>
           </li>
-          <Link to="/dashboard/booking" className="nav-item">
-            <a href="#" className="nav-link link-dark d-flex align-items-center">
+          <Link to="/dashboard/bookings" className="nav-item nav-link link-dark d-flex align-items-center">
               <LuTicket />
               <i className="bi bi-speedometer2 me-2"></i> 
             Bookings 
-           </a>
           </Link>
-            <Link to="/dashboard/venues" className="nav-item">
-            <a href="#" className="nav-link link-dark d-flex align-items-center">
+          <Link to="/dashboard/venues" className="nav-item nav-link link-dark d-flex align-items-center">
+            
               <CiLocationOn />
               <i className="bi bi-speedometer2 me-2"></i> 
               Venues
-            </a>
+            
           </Link>
-            <Link to="/dashboard/attendees" className="nav-item">
-            <a href="#" className="nav-link link-dark d-flex align-items-center">
+            <Link to="/dashboard/attendees" className="nav-item nav-link link-dark d-flex align-items-center">
+            
              <LuUsers />
               <i className="bi bi-speedometer2 me-2"></i> 
               Attendees
-            </a>
+            
           </Link>
-            <Link to="/dashboard/settings" className="nav-item">
-            <a href="#" className="nav-link link-dark d-flex align-items-center">
+            <Link to="/dashboard/settings" className="nav-item nav-link link-dark d-flex align-items-center">
               <IoSettingsOutline />
               <i className="bi bi-speedometer2 me-2"></i> 
               Settings
-            </a>
           </Link>
         </ul>
       </div>

@@ -20,7 +20,7 @@ export default function Dashboard() {
       <div className={styles.body}>
         <Routes>
           <Route index element ={<DashboardHome/>}/>
-          <Route path="bookings" element={<bookings/>}/>
+          <Route path="/bookings" element={<Bookings/>}/>
           <Route path="venues"  element={<Venues/>}/>
           <Route path="attendees" element={<></>}/>
           <Route path="settings" element={<Settings/>}/>
