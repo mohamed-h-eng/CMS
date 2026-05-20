@@ -32,3 +32,5 @@ p, h1, span{
     background-color: var(--color-primary);
     color: white;
 }
+
+a{text-decoration: none;}

@@ -6,6 +6,10 @@ import Form from '../../components/Dashboard/Form/Form'
 import {Link, Routes, Route} from 'react-router-dom'
 import { IoEyeOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import Venues from './pages/Venues/Venues'
+import Settings from './pages/Settings/Settings'
+import Bookings from './pages/Bookings/Bookings'
+import attendees from './pages/Attendees/Attendees'
 
 export default function Dashboard() {
   return (
@@ -16,10 +20,10 @@ export default function Dashboard() {
       <div className={styles.body}>
         <Routes>
           <Route index element ={<DashboardHome/>}/>
-          <Route path="bookings" element={<></>}/>
-          <Route path="venues"  element={<></>}/>
+          <Route path="bookings" element={<bookings/>}/>
+          <Route path="venues"  element={<Venues/>}/>
           <Route path="attendees" element={<></>}/>
-          <Route path="settings" element={<></>}/>
+          <Route path="settings" element={<Settings/>}/>
         </Routes>
       </div>
     </div>
