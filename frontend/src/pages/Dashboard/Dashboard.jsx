@@ -3,7 +3,7 @@ import styles from './Dashboard.module.css'
 import Status from '../../components/Dashboard/Status/Status'
 import Events from '../../components/Dashboard/Events/Events'
 import Form from '../../components/Dashboard/Form/Form'
-import {Link} from 'react-router-dom'
+import {Link, Routes, Route} from 'react-router-dom'
 import { IoEyeOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
@@ -14,7 +14,21 @@ export default function Dashboard() {
         <SideBar />
       </div>
       <div className={styles.body}>
-        <div className={styles.navbar}>
+        <Routes>
+          <Route index element ={<DashboardHome/>}/>
+          <Route path="bookings" element={<></>}/>
+          <Route path="venues"  element={<></>}/>
+          <Route path="attendees" element={<></>}/>
+          <Route path="settings" element={<></>}/>
+        </Routes>
+      </div>
+    </div>
+  )
+}
+
+function DashboardHome(){
+  return(<>
+  <div className={styles.navbar}>
           <div className={styles.navLabel}>
             <h1>Admin Dashboard</h1>
             <p>Welcome back, manager. Here is what's happening today</p>
@@ -36,7 +50,5 @@ export default function Dashboard() {
             <Form/>
           </div>
         </div>
-      </div>
-    </div>
-  )
+  </>)
 }
