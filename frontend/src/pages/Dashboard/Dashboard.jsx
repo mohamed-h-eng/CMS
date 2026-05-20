@@ -6,6 +6,7 @@ import Form from '../../components/Dashboard/Form/Form'
 import {Link, Routes, Route} from 'react-router-dom'
 import { IoEyeOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import Bookings from './pages/Bookings/Bookings'
 
 export default function Dashboard() {
   return (
@@ -16,7 +17,7 @@ export default function Dashboard() {
       <div className={styles.body}>
         <Routes>
           <Route index element ={<DashboardHome/>}/>
-          <Route path="bookings" element={<></>}/>
+          <Route path="bookings" element={<Bookings/>}/>
           <Route path="venues"  element={<></>}/>
           <Route path="attendees" element={<></>}/>
           <Route path="settings" element={<></>}/>
@@ -29,26 +30,26 @@ export default function Dashboard() {
 function DashboardHome(){
   return(<>
   <div className={styles.navbar}>
-          <div className={styles.navLabel}>
-            <h1>Admin Dashboard</h1>
-            <p>Welcome back, manager. Here is what's happening today</p>
-          </div>
-          <div className="d-flex gap-3 align-items-center">
-            <Link className="btn btn-outline-secondary d-flex gap-1 align-items-center" to="/">
-            <IoEyeOutline/>
-            Switch to User View
-            </Link>
-            <Link><IoMdNotificationsOutline style={{fontSize:"25px", color:"var(--color-primary)"}}/></Link>
-          </div>
-        </div>
-        <Status/>
-        <div className={styles.addEvents}>
-          <div className={styles.events}>
-            <Events/>
-          </div>
-          <div className={styles.form}>
-            <Form/>
-          </div>
-        </div>
+    <div className={styles.navLabel}>
+      <h1>Admin Dashboard</h1>
+      <p>Welcome back, manager. Here is what's happening today</p>
+    </div>
+    <div className="d-flex gap-3 align-items-center">
+      <Link className="btn btn-outline-secondary d-flex gap-1 align-items-center" to="/">
+      <IoEyeOutline/>
+      Switch to User View
+      </Link>
+      <Link><IoMdNotificationsOutline style={{fontSize:"25px", color:"var(--color-primary)"}}/></Link>
+    </div>
+  </div>
+  <Status/>
+  <div className={styles.addEvents}>
+    <div className={styles.events}>
+      <Events/>
+    </div>
+    <div className={styles.form}>
+      <Form/>
+    </div>
+  </div>
   </>)
 }

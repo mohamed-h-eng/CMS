@@ -1,4 +1,6 @@
 import styles from './Input.module.css'
+import { IoIosSearch } from "react-icons/io";
+import { IoFilterSharp } from "react-icons/io5";
 
 export function Input({title, placeholder}){
     return (<>
@@ -15,4 +17,17 @@ export function InputDual({children}){
             {children}
         </div>
     </>)
+}
+
+export function InputSearch(){
+    return (
+        <>
+            <div className={styles.Search}>
+                <div className={styles.SearchInput}>
+                    <IoIosSearch style={{border:"none"}}/>
+                    <input placeholder="Search events..." className={styles.input}/>
+                </div>
+            </div>
+        </>
+    )
 }

@@ -24,3 +24,36 @@
     gap:16px;
     width:100%;
 }
+/* input search */
+.headerSearch{
+    display:flex;
+    gap:10px;
+    color:black
+}
+.SearchInput{
+    border:1px solid var(--color-border);
+    background-color:var(--color-primary-mute);
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    padding:2px;   
+}
+.input{
+    border:none;
+    font-size:16px;
+    background:none;
+}
+.input:focus{
+    outline:none
+}
+.filter{
+    border:1px solid var(--color-border);
+    border-radius:5px;
+    background:none;
+}
+.SearchInput :last-child:focus{
+    outline:none
+}
+.searchIcon{
+    border:none;
+}
