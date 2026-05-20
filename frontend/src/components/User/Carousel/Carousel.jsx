@@ -60,7 +60,6 @@ export default function Carousel({ events }) {
               <div className={styles.overlay}></div>
 
               <div className={styles.content}>
-                <span className={styles.badge}>{event.badge}</span>
                 <h3>{event.title}</h3>
                 <p>{event.description}</p>
 

@@ -30,7 +30,7 @@ function FilterPage({ events }) {
           {/* this will be the card component used to display the events sent from the backend */}
           {events.map((event) => (
             <div
-              className="col-12 col-md-3 d-flex justify-content-center"
+              className="col-12 col-md-3 d-flex p-3 justify-content-center"
               key={event.id}
             >
               <CardComponent event={event} />
@@ -46,3 +46,4 @@ function FilterPage({ events }) {
 }
 
 export default FilterPage;
+
