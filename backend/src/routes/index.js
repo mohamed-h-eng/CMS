@@ -1,5 +1,5 @@
 ﻿import { Router } from "express";
-import userRouter from "./user.routes.js";
+import { userRouter } from "./UserRoute/user.routes.js";
 import { eventRouter } from "./EventRoute/event.router.js";
 import { categoryRoute } from "./CategoryRoute/CategoryRoute.js";
 

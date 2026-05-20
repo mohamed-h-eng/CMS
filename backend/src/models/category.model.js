@@ -14,7 +14,6 @@ const categorySchema = new Schema({
   eventId: {
     type: mongoose.Types.ObjectId,
     ref: Event,
-    required: true,
   },
   icon: {
     type: String,
